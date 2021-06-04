@@ -1,0 +1,113 @@
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --dCyan: hsl(184, 100%, 22%);
+    --vdCyan: hsl(179, 100%, 13%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+}
+
+.box {
+    padding: 40px;
+}
+
+.box1 {
+    border-radius: 10px 0 0 10px;
+    background-color: var(--orange);
+}
+
+.box2 {
+    background-color: var(--dCyan);
+}
+
+.box3 {
+    border-radius: 0 10px 10px 0;
+    background-color: var(--vdCyan);
+}
+
+h1 {
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 20px 0;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin: 20px 0 40px;
+}
+
+.box a {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: relative;
+    left: 10px;
+    border: 2px solid hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(0, 0%, 95%);
+}
+
+.box1 a {
+    color: var(--orange);
+}
+
+.box2 a {
+    color: var(--dCyan);
+}
+
+.box3 a {
+    color: var(--vdCyan);
+    
+}
+
+.box a:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+@media screen and (max-width:674px) {
+    body {
+        height: 100%;
+        margin: 40px 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .box1 {
+        border-radius: 10px 10px 0 0;
+        background-color: var(--orange);
+    }
+
+    .box3 {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .box a {
+        margin-top: 2px;
+    }
+}
